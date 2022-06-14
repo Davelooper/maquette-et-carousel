@@ -1,0 +1,353 @@
+.container--cyan {
+    background-color: rgb(166, 237, 247);
+}
+
+.container--purple {
+    background-color: rgb(169 156 245);;
+}
+
+.container--margin {
+    margin: 0 20% 0 20%;
+}
+
+.networks {
+    padding: 5px 0 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.networks__image--margin-left {
+    margin-left: 5px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.nav__imagelogo {
+    width: 100%;
+}
+
+.nav__links {
+    list-style-type: none;
+    padding-left: 0;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav__link {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+}
+
+.nav__link:hover {
+    color: red;
+}
+
+.dropdown__arrow {
+    width: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.dropdown__droppable {
+    display: none;
+    position: absolute;
+    background-color: rgb(167 163 160);
+    z-index: 1000;
+}
+
+.dropdown__droppable--dropped {
+    display: block;
+}
+
+.dropdown__link {
+    padding: 5px 10px 5px 10px;
+}
+
+.dropdown__link:hover {
+    background-color:  white;
+}
+
+.carousel {
+    margin:  auto;
+    padding: 20px 0px;
+    max-width: 940px;
+}
+
+.carousel-home {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 100;
+}
+.carousel-home__container {
+    display: flex;
+}
+
+.carousel-home__item {
+    float: left;
+}
+
+.carousel-home__item::after {
+    clear: both;
+}
+
+.carousel-home__next {
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    max-width: 45px;
+    overflow: hidden;
+    right: 5px;
+    transform: translateY(-50%);
+}
+
+.carousel-home__next-image {
+    transform: translateX(-50%);
+}
+
+.carousel-home__prev {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    height: 50px;
+    max-width: 45px;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+.carousel-home__prev--hidden, .carousel-home__next--hidden {
+    display: none;
+}
+
+.carousel-home__pagination {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.carousel-home__pagination-button {
+    width: 30px;
+    height: 25px;
+    background: no-repeat url("assets/1.png");
+}
+
+.carousel-home__pagination-button--active {
+    background: center no-repeat url("assets/1.png");
+}
+
+.carousel__image {
+    /* width: 100%; */
+}
+
+.activities__container {
+    padding-top: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.activities__head {
+    background-color: rgb(169 156 245);
+    display: inline-flex;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.activities__title {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.activities__link {
+    color: red
+}
+
+.destinations {
+    padding-bottom: 30px;
+}
+
+.destinations__container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.destinations__country {
+    max-width: 33%;
+}
+
+.about {
+    display: grid;
+    grid-template-rows: 80% 20%;
+    grid-template-columns: 1fr 1fr;
+    padding:  0 0 50px 0;
+}
+
+.about__title {
+    font-weight: 400;
+}
+
+.about__div--first {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    margin-right: 20px;
+}
+
+.about__div--second {
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+}
+
+.about__div--third {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 2;
+}
+
+.about__container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about__image {
+    width: 100%;
+    height: 100%;
+}
+
+.about__button {
+    background-color: green;
+    color: white;
+    min-width: 80px;
+    min-height: 30px;
+    border-radius: 5px;
+}
+
+.footer__links {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    padding: 10px 0 10px 0;
+    flex-wrap: wrap;
+}
+
+.footer__link {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.footer__copyright {
+    color:rgb(119, 96, 73);
+    font-size: 0.8rem;
+    padding-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    
+    .container--margin {
+        margin: 0 10%;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav__links {
+        width: 75%;
+    }
+
+}
+
+  @media screen and (min-width: 0px) and (max-width: 768px) {
+
+    .nav {
+        display: block;
+    }
+
+    .nav__links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav__link {
+        font-size: 1.1rem;
+    }
+
+    .nav__li, .dropdown {
+        display: inline-block;
+        border-top: 1px solid lightgrey;
+        border-bottom: 1px solid lightgrey;
+        padding: 5px 0 5px 0;
+    }
+    
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown__arrow {
+        position: absolute;
+        right: 5px;
+    }
+
+    .dropdown__droppable {
+        width: 100%;
+        position: inherit;
+    }
+
+    .activities__container {
+        display: block;
+    }
+
+    .activities {
+        margin-bottom: 20px;
+    }
+
+    .activities__head {
+        width: 100%;
+    }
+
+    .activities__content {
+        text-align: justify;
+        margin-bottom: 5px;
+    }
+
+    .destinations__country {
+        max-width: none;
+    }
+
+    .destinations__country--brazil, .destinations__country--alger {
+        display: none;
+    }
+
+    .about {
+        display: block;
+    }
+
+    .about__div--first { 
+        padding-top: 20px;
+    }
+
+    .footer__links {
+        width: 100%;
+    }
+
+  }
+
+  @media screen and (max-width: 576px) {
+      .container--margin {
+          margin: 0;
+      }
+
+      .carousel {
+          text-align: center;
+      }
+  }
